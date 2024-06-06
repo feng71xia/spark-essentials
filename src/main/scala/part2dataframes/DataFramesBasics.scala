@@ -9,6 +9,7 @@ object DataFramesBasics extends App {
   val spark = SparkSession.builder()
     .appName("DataFrames Basics")
     .config("spark.master", "local")
+    .config("spark.driver.bindAddress", "127.0.0.1")
     .getOrCreate()
 
   // reading a DF
